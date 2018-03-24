@@ -1,0 +1,19 @@
+ip: 192.168.10.10
+memory: 2048
+cpus: 1
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    - map: ~/work/3AT/icos-token-holders
+      to: /home/vagrant/icos
+
+sites:
+    - map: icos.test
+      to: /home/vagrant/icos/public
+      php: "7.1"
+databases:
+    - icos
+name: icos
+hostname: icos
