@@ -11,7 +11,7 @@ function info {
 info "setting php 7.1"
 cat > /etc/php/7.1/fpm/conf.d/my.ini << EOF
 short_open_tag = on
-error_reporting = E_ALL & ~E_NOTICE
+error_reporting = E_ALL & E_STRICT
 EOF
 
 service php7.1-fpm restart
